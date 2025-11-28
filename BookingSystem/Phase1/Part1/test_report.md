@@ -54,11 +54,11 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🔴 High | Potential SQL injection | Password field doesnt sanitize input, accepting SQL syntax as a password |  |
-| F-02 | 🟠 Medium | Missing CSRF tokens | No CSRF tokens in HTTP headers  | <form action="/register" method="POST"> |
-| F-03 | 🟠 Medium | Missing CSP headers | Session ID remains unchanged after login | Method: `GET` |
-| F-04 | 🟡 Low | Vulnerable password in response | Shows passwords as plaintext in site responses |  |
-| F-05 | 🟡 Low | Weak password policy | Has no rules for passwords, accepts even single characters |  |
+| F-01 | 🔴 High | Potential SQL injection | Password field doesnt sanitize input, accepting SQL syntax as a password | <img width="335" height="417" alt="k0SDI1T" src="https://github.com/user-attachments/assets/df70fed6-7b67-461e-9fbf-3c4164c8b068" /> |
+| F-02 | 🟠 Medium | Missing CSRF tokens | No CSRF tokens in HTTP headers  | ZAP report |
+| F-03 | 🟠 Medium | Missing CSP headers | Session ID remains unchanged after login | ZAP report |
+| F-04 | 🟡 Low | Vulnerable password in response | Shows passwords as plaintext in site responses | <img width="1278" height="547" alt="iBP5WKR" src="https://github.com/user-attachments/assets/4f3ffabb-7ba3-4967-917f-bf3ccf99350e" /> |
+| F-05 | 🟡 Low | Weak password policy | Has no rules for passwords, accepts even single characters | <img width="950" height="897" alt="sso53WH" src="https://github.com/user-attachments/assets/ac1ae019-c4b5-4f86-a6ee-655ec301f1e4" /> |
 
 
 
@@ -68,24 +68,9 @@
 
 # 5️⃣ OWASP ZAP Test Report (Attachment)
 
-**Purpose:**  
-- Attach or link your OWASP ZAP scan results (Markdown format preferred).
-
----
-
-**Instructions (CMD version):**
-1. Run OWASP ZAP baseline scan:  
-   ```bash
-   zap-baseline.py -t https://example.com -r zap_report_round1.html -J zap_report.json
-   ```
-2. Export results to markdown:  
-   ```bash
-   zap-cli report -o zap_report_round1.md -f markdown
-   ```
-3. Save the report as `zap_report_round1.md` and link it below.
-
 ---
 > [!NOTE]
-> 📁 **Attach full report:** → `check itslearning` → **Add a link here**
+> [zap_report.md](https://github.com/user-attachments/files/23829463/zap_report.md)
 
 ---
+

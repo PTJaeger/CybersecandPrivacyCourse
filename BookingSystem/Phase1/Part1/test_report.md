@@ -7,8 +7,8 @@
 - The purpose of this test was to pinpoint vulnerabilities in the sites user registration process.
 
 **Scope:**  
-- Tested components:  
-- Exclusions:  
+- Tested components: User Registration process
+- Exclusions: All else
 - Test approach: Gray-box
 
 **Test environment & dates:**  
@@ -17,22 +17,22 @@
 - Test environment details: Kali Linux VM, using Docker Engine. Chromium browser via Burp Suite.
 
 **Assumptions & constraints:**  
-- e.g., credentials provided, limited time, etc.
+- Multiple days of access time, no credentials provided
 
 ---
 
 # 2️⃣ Executive Summary
 
-**Short summary (1-2 sentences):**  
+**Short summary (1-2 sentences): Multiple vulnerabilities found, ranging from minor to major issues.
 
-**Overall risk level:** (Low / Medium / High / Critical)
+**Overall risk level:** High
 
 **Top 5 immediate actions:**  
-1.  
-2.  
-3.  
-4.  
-5.  
+1.  Investigate password field input sanitization
+2.  Enforce proper password requirements
+3.  Add CSP header
+4.  Add missing Anti-CSRF tags
+5.  Obfuscate the password in site responses
 
 ---
 
@@ -54,15 +54,15 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🔴 High | SQL Injection in registration | Input field allows `' OR '1'='1` injection | Screenshot or sqlmap result |
-| F-02 | 🟠 Medium | Session fixation | Session ID remains unchanged after login | Burp log or response headers |
-| F-03 | 🟡 Low | Weak password policy | Accepts passwords like "12345" | Screenshot of registration success |
+| F-01 | 🔴 High | Potential SQL injection | Password field doesnt sanitize input, accepting SQL syntax as a password |  |
+| F-02 | 🟠 Medium | Missing CSRF tokens | No CSRF tokens in HTTP headers  | <form action="/register" method="POST"> |
+| F-03 | 🟠 Medium | Missing CSP headers | Session ID remains unchanged after login | Method: `GET` |
+| F-04 | 🟡 Low | Vulnerable password in response | Shows passwords as plaintext in site responses |  |
+| F-05 | 🟡 Low | Weak password policy | Has no rules for passwords, accepts even single characters |  |
+
+
 
 ---
-
-> [!NOTE]
-> Include up to 5 findings total.   
-> Keep each description short and clear.
 
 ---
 

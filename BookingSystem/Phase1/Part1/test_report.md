@@ -56,8 +56,8 @@
 |------|-----------|----------|--------------|------------------|
 | F-01 | 🔴 High | Potential SQL injection | Password field doesnt sanitize input, accepting SQL syntax as a password | <img width="335" height="417" alt="k0SDI1T" src="https://github.com/user-attachments/assets/df70fed6-7b67-461e-9fbf-3c4164c8b068" /> |
 | F-02 | 🟠 Medium | Missing CSRF tokens | No CSRF tokens in HTTP headers  | ZAP report |
-| F-03 | 🟠 Medium | Missing CSP headers | Session ID remains unchanged after login | ZAP report |
-| F-04 | 🟡 Low | Missing Clickjacking header  | Shows passwords as plaintext in site responses | ZAP report |
+| F-03 | 🟠 Medium | Missing CSP headers | Missing CSP tokens in headers | ZAP report |
+| F-04 | 🟡 Low | Missing Clickjacking header  | Missing Anti-Clickjacking headers | ZAP report |
 | F-05 | 🟡 Low | Weak password policy | Has no rules for passwords, accepts even single characters | <img width="950" height="897" alt="sso53WH" src="https://github.com/user-attachments/assets/ac1ae019-c4b5-4f86-a6ee-655ec301f1e4" /> |
 
 

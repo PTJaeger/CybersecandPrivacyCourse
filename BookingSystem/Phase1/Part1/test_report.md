@@ -54,7 +54,7 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🔴 High | SQL injection in username and password fields | ZAP report <img width="335" height="417" alt="k0SDI1T" src="https://github.com/user-attachments/assets/df70fed6-7b67-461e-9fbf-3c4164c8b068" /> |
+| F-01 | 🔴 High | SQL injection in username and password fields | User input is not sanitized in either form field |ZAP report <img width="335" height="417" alt="k0SDI1T" src="https://github.com/user-attachments/assets/df70fed6-7b67-461e-9fbf-3c4164c8b068" /> |
 | F-02 | 🔴 High | Path Traversal | Form allows path traversal | ZAP report |
 | F-03 | 🟠 Medium | Missing CSRF tokens | No CSRF tokens in HTTP headers  | ZAP report |
 | F-04 | 🟠 Medium | Missing CSP headers | Missing CSP tokens in headers | ZAP report |

@@ -28,7 +28,7 @@
 **Overall risk level:** High
 
 **Top 5 immediate actions:**  
-1.  Investigate password field input sanitization
+1.  Investigate SQL injection in input fields
 2.  Enforce proper password requirements
 3.  Add CSP header
 4.  Add missing Anti-CSRF tags
@@ -54,11 +54,12 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🔴 High | Potential SQL injection | Password field doesnt sanitize input, accepting SQL syntax as a password | <img width="335" height="417" alt="k0SDI1T" src="https://github.com/user-attachments/assets/df70fed6-7b67-461e-9fbf-3c4164c8b068" /> |
-| F-02 | 🟠 Medium | Missing CSRF tokens | No CSRF tokens in HTTP headers  | ZAP report |
-| F-03 | 🟠 Medium | Missing CSP headers | Missing CSP tokens in headers | ZAP report |
-| F-04 | 🟡 Low | Missing Clickjacking header  | Missing Anti-Clickjacking headers | ZAP report |
-| F-05 | 🟡 Low | Weak password policy | Has no rules for passwords, accepts even single characters | <img width="950" height="897" alt="sso53WH" src="https://github.com/user-attachments/assets/ac1ae019-c4b5-4f86-a6ee-655ec301f1e4" /> |
+| F-01 | 🔴 High | SQL injection in username and password fields | ZAP report <img width="335" height="417" alt="k0SDI1T" src="https://github.com/user-attachments/assets/df70fed6-7b67-461e-9fbf-3c4164c8b068" /> |
+| F-02 | 🔴 High | Path Traversal | Form allows path traversal | ZAP report |
+| F-03 | 🟠 Medium | Missing CSRF tokens | No CSRF tokens in HTTP headers  | ZAP report |
+| F-04 | 🟠 Medium | Missing CSP headers | Missing CSP tokens in headers | ZAP report |
+| F-05 | 🟡 Low | Missing Clickjacking header  | Missing Anti-Clickjacking headers | ZAP report |
+| F-06 | 🟡 Low | Weak password policy | Has no rules for passwords, accepts even single characters | <img width="950" height="897" alt="sso53WH" src="https://github.com/user-attachments/assets/ac1ae019-c4b5-4f86-a6ee-655ec301f1e4" /> |
 
 
 
@@ -70,7 +71,7 @@
 
 ---
 > [!NOTE]
-> [zap_report.md](https://github.com/user-attachments/files/23829463/zap_report.md)
+> [zap_report.md](https://github.com/user-attachments/files/23829463/zap_report_round1.md)
 
 ---
 

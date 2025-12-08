@@ -1,8 +1,13 @@
-Password 1:
-Password 2:
-Password 3:
-Password 4:
-Password 5:
-
-
-
+Password 1: Took all password hashes from the DB and placed them into a text file. Unpacked the rockyou.txt file and used both with hashcat in MD5 dictattack mode. Password for account whatsupdoc@looneytunes.tv is carrots123
+Password 2: Same as above. PW for account genius@starkindustries.com is iamironman
+Password 3: Same as above. PW for account doh@springfieldpower.net is donuts4life
+Password 4: Same as above. PW for account iamyourfather@deathstar.gov is darkside42
+Password 5: Dictionary bruteforce attack using known part of the password. PW for account darkknight@gothamwatch.org is ianvengeance
+Password 6: Dictionary bruteforce attack using known part of the password. PW for account whysoserious@gothamchaos.net is chaos123!
+Did multiple limited non-dictionary bruteforces. Nothing found as limited too much by time and integer overflows in the case of hashcat.
+Q1:What is the main difference between Dictionary and Non-Dictionary attacks?
+A dictionary attack uses, for example, a list of known common passwords/cracked hashes and/or known hashes from the site DB to crack a password by cycling through the wordlist to find matching hashes. A non-dictionary attack either sources the password via other means or simply attempts to bruteforce the correct password.
+Q2:What advantage does an attacker gain by having access to the system’s database that reveals the users and the password hashes?
+It significantly eases the process of cracking by giving concrete points of comparison and by giving the attacked the exact password hashes without having to rely on known hash lists. Knowing which password belongs to what account also helps.
+Q3:What concrete security benefits are achieved by using longer passwords instead of shorter ones?
+A longer password exponentially increases the time consumed by a bruteforce attack, making them unviable. A long, complex password makes it so that even if the attacker knows a part the password, they cannot use it to crack the rest via brute force.

@@ -29,23 +29,23 @@ The booking system displays booked resources without requiring login, but does n
 ---
 ### **Discovered links and endpoints**
 
-localhost:8003
-localhost:8003/login
-localhost:8003/resources
-localhost:8003/register
-localhost:8003/reservation
-localhost:8003/reservation?id=*
-localhost:8003/api/resources
-localhost:8003/api/reservations
-localhost:8003/api/users
+localhost:8003<br>
+localhost:8003/login<br>
+localhost:8003/resources<br>
+localhost:8003/register<br>
+localhost:8003/reservation<br>
+localhost:8003/reservation?id=*<br>
+localhost:8003/api/resources<br>
+localhost:8003/api/reservations<br>
+localhost:8003/api/users<br>
 
 wfuzz did not discover URLs or endpoints that hadn't been manually discovered.
 
 ---
 ### **Observations**
-Backup correctly enforces authorization except when accessing API endpoints, BurpSuite shows that the site wants to show the Not Found status page but is overridden by the actual page showing, even to Guests.
-Site database has a table for admin logs yet there exists no admin panel or other way to generate these logs.
-Resources API can be flooded by programs like ZAP in attack mode with code, commands and other garbage data.
+Backup correctly enforces authorization except when accessing API endpoints, BurpSuite shows that the site wants to show the Not Found status page but is overridden by the actual page showing, even to Guests.<br>
+Site database has a table for admin logs yet there exists no admin panel or other way to generate these logs.<br>
+Resources API can be flooded by programs like ZAP in attack mode with code, commands and other garbage data.<br>
 
 
 ---

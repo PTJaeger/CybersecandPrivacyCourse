@@ -9,3 +9,5 @@
 | 28.11.2025 | 7 | Set up Pentest Env and completed pentest | Found issues, submitted reports on ItsLearning |
 | 2.11.2025 | 2 | Completed the second round of testing | Checked fixes, submitted findings on ItsLearning |
 | 8.12.2025 | 6 | Completed Phase 2 PW cracking | Cracked over 5 passwords, submitted report |
+| 16.12.2025 | 8 | Completed Phase 3 | Submitted report |
+| 8.12.2025 | 8 | Completed Phase 4 | Submitted report and policy files |

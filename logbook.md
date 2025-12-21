@@ -13,4 +13,6 @@
 | 18.12.2025 | 8 | Completed Phase 4 | Submitted report and policy files |
 | 19.12.2025 | 7 | Completed Portswigger labs | Total of 10 labs done |
 | 20.12.2025 | 9 | Completed Portswigger labs  | Total of 16 labs done |
-| 21.12.2025 | 5 | Completed Portswigger labs and submitted final assignment | Submitted assignment, completed a total of 20 labs |
+| 21.12.2025 | 5 | Completed Portswigger labs | Completed a total of 20 labs |
+| 21.12.2025 | 2 | Completed final assignment | Submitted assignment |
+
